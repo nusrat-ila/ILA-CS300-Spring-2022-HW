@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <h1><em>A Fancy JavaScript Calculator by [NUSRAT, ILA]</em> </h1>
+        <script>
+            function calculation() 
+            {  
+                var num_1= document.getElementById("input_1").value;
+                var num_2= document.getElementById("input_2").value;
+                var op = document.getElementById("operation").value;
+
+                if(op == "+")
+                    document.getElementById("result").value = parseInt(num_1)+parseInt(num_2);
+                if(op == "-")
+                    document.getElementById("result").value = parseInt(num_1)-parseInt(num_2);
+                if(op == "*")
+                    document.getElementById("result").value = parseInt(num_1)*parseInt(num_2);
+                if(op == "/")
+                    document.getElementById("result").value = parseInt(num_1)/parseInt(num_2);
+            }       
+        </script>
+    </head>
+
+    <body>
+        <input type="text"  name="input_1" access="false" id="input_1">
+
+        <select  name="operation" id="operation">
+            <option value= "+" id="plus"> + </option>
+            <option value= "-" id="minus-"> - </option>
+            <option value= "*" id="multiplication"> * </option>
+            <option value= "/" id="division"> / </option>
+        </select>
+
+        <input type="text"  name="input_2" access="false" id="input_2">
+
+        <label for="operation" > = </label>
+
+        <input type="text"  name="result" access="false" id="result">
+        
+        <br><br>
+
+        <button onclick = "calculation()" > COMPUTE </button>
+    </body>
+
+</html>
